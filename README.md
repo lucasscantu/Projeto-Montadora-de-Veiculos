@@ -12,4 +12,4 @@ Este repositório contém o diagrama UML completo representando a arquitetura de
 
 ## 📐 Diagrama UML (PlantUML)
 
-![Diagrama UML](./projeto_montadora/diagrama.jpeg)
+![Diagrama UML](./projeto_montadora/diagrama.jpg)

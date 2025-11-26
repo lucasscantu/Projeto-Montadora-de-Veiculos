@@ -1,4 +1,4 @@
-# 🚗 Sistema de Montadora — UML, Factory, Observer e Modelos de Veículos
+# Sistema de Montadora — UML, Factory, Observer e Modelos de Veículos
 
 Este repositório contém o diagrama UML completo representando a arquitetura de um sistema de produção de veículos utilizando:
 

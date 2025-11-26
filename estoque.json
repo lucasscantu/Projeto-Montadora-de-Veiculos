@@ -1,0 +1,20 @@
+[
+    {
+        "tipo": "moto",
+        "modelo": "Honda Pop 110i",
+        "ano": 2025,
+        "preco_base": 12000,
+        "tipo_carro": null,
+        "cilindradas": 110,
+        "capacidade_carga": null
+    },
+    {
+        "tipo": "caminhao",
+        "modelo": "VW Delivery",
+        "ano": 2025,
+        "preco_base": 280000,
+        "tipo_carro": null,
+        "cilindradas": null,
+        "capacidade_carga": 12
+    }
+]

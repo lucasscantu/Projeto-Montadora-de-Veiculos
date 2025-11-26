@@ -10,18 +10,21 @@ Este repositório contém o diagrama UML completo representando a arquitetura de
 
 ---
 
-## 🏗️ Estrutura e Aplicação do Factory Method
+A estrutura modular do projeto separa responsabilidades de forma clara:
 
-O padrão Factory Method é utilizado para isolar a lógica de criação de objetos (`Veiculo`) do código que os utiliza. Isso garante que o sistema siga o Princípio da Aberto/Fechado (OCP), sendo **aberto para extensão** (novos veículos) e **fechado para modificação** (lógica de montagem existente).
-
-
-
-| Componente (Padrão) | Classe/Interface (Projeto) | Papel no Projeto |
+| Módulo | Classes Principais | Responsabilidade |
 | :--- | :--- | :--- |
-| **Produto** | `Veiculo` (Classe Abstrata) | Define a interface comum para todos os veículos que podem ser produzidos. |
-| **Produtos Concretos** | `Carro`, `Moto`, `Caminhao` | Implementações específicas do Produto. |
-| **Criador** | `Montadora` (Classe Abstrata) | Declara o **Factory Method** (`criarVeiculo`), mas não implementa a lógica de criação específica. |
-| **Criadores Concretos** | `MontadoraCarro`, `MontadoraMoto`, `MontadoraCaminhao` | Subclasses que implementam o Factory Method para instanciar e retornar um tipo específico de `Veiculo` (Produto Concreto). |
+| **`models/veiculo.py`** | `Veiculo` (ABC) | Define a interface básica para todos os veículos (Produto Abstrato). |
+| **`models/carro.py`** | `Carro`, `TipoCarro` (Enum) | Implementação concreta do `Veiculo` com lógica de preço específica. |
+| **`models/moto.py`** | `Moto` | Implementação concreta do `Veiculo` (Preço baseado nas cilindradas). |
+| **`models/caminhao.py`** | `Caminhao` | Implementação concreta do `Veiculo` (Preço baseado na capacidade de carga). |
+| **`models/factory.py`** | `VeiculoFactory` | Contém o método estático para criar veículos (Simple Factory). |
+| **`models/observer.py`** | `Observer`, Observadores Concretos | Define e implementa os comportamentos de notificação. |
+| **`models/montadora.py`** | `Montadora` | Gerencia a produção, notifica observadores e lida com a persistência de dados. |
+| **`models/vendas.py`** | `SistemaVendas` | Lógica de negócio para vender veículos e gerar relatórios. |
+| **`models/estoque.py`** | Funções de persistência | Lida com a serialização e desserialização do estoque (`estoque.json`). |
+
+---
 
 ---
 
